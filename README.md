@@ -2,7 +2,7 @@ This repo documents my exploratory testing and bug reporting while interacting p
 
 # Tools Used
 - [Jam.dev](https://jam.dev): Bug capture and reporting
-- Gemini AI (via Bard or API)
+- Gemini AI 
 - Chrome browser (with Jam extension)
 
 # 📁 Structure

@@ -72,7 +72,9 @@ generate excessively long and meaningless responses, or trigger resource-intensi
 • Harmful Content Generation: Instructions to generate biased, unethical, or otherwise undesirable content. 
 The impact could range from subtle misinformation and degraded user experience to severe data breaches, 
 system compromise, or service disruption. 
+
 5. Mitigation Strategies: A Proactive Security Posture 
+
 Mitigating RAG injection via public-facing sources requires a multi-layered and proactive approach:  
 • Robust Input Validation and Sanitization: Implement robust filters for all ingested RAG data, including bug 
 reports, to detect and neutralize adversarial payloads before indexing. This goes beyond basic sanitization to 

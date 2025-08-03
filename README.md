@@ -12,5 +12,5 @@ This repo documents my security research and bug reporting while interacting pri
 
 # Notes
 All bugs were responsibly reported to Google via [Bug Hunters](https://bughunters.google.com/) or through direct instruction of responsible disclosure & error reporting via Google Gemini AI App. This repo is for ethical, educational, and professional purposes only. 
-Better Security through ethical research and responsible disclosure 
+Better Security through ethical research and responsible disclosure. 
 

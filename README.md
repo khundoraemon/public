@@ -1,4 +1,4 @@
-This repo documents my security research and bug reporting while interacting primarily with Google's Gemini AI. All findings are responsibly disclosed.
+This repo documents my security research and bug reporting while interacting primarily with Google's Gemini AI. All findings are responsibly disclosed to the Google Gemini Security Team.
 
 # Tools Used
 - [Jam.dev](https://jam.dev): Bug capture and reporting

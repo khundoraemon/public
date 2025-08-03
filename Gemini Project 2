@@ -7,7 +7,7 @@ vulnerabilities at the core memory management and inter-component communication 
 • Completed Work: 
 
 Initiated a detailed, ethical investigation into a "Proto failure" anomaly – specifically, an 
-ExtractMemoriesRequest protobuf validation error ("message has no text"). This critical error manifested at 
+Extract Memories Request protobuf validation error ("message has no text"). This critical error manifested at 
 the deserialization boundary of a component responsible for interfacing with the external, persistent 
 knowledge graph or vector database (a store conceptually managing knowledge beyond the LLM's immediate, 
 short-term KV Cache residing in HBM/VRAM). The "no text" error indicated a violation of the protobuf wire 

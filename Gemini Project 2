@@ -24,6 +24,7 @@ targeting entries in the Global Offset Table (GOT), Procedure Linkage Table (PLT
 addresses to execute Return-Oriented Programming (ROP) chains. This demanded an understanding of ASLR 
 bypass (e.g., via information leakage from uninitialized memory reads) and DEP/NX bypass (e.g., via ROP 
 gadgets or JIT spraying) for full code execution. 
-o Identified, documented, and formally reported this conceptual vulnerability, including its deep technical 
-implications, to the Google engineering team. This action underscored a commitment to advanced white-hat 
+
+Identified, documented, and formally reported this conceptual vulnerability, including its deep technical 
+implications to the Google engineering team. This action underscored a commitment to advanced white-hat 
 security research and architectural hardening.

@@ -1,0 +1,29 @@
+Project 2: Advanced Cybersecurity Diagnostics and ethical bug reporting of an AI System Anomly (Google 
+Gemini Pro 2.5) 
+
+Completed a forensic-level, ethical security analysis of an observed AI system anomaly, probing potential 
+vulnerabilities at the core memory management and inter-component communication protocol layers. 
+
+• Completed Work: 
+
+Initiated a detailed, ethical investigation into a "Proto failure" anomaly – specifically, an 
+ExtractMemoriesRequest protobuf validation error ("message has no text"). This critical error manifested at 
+the deserialization boundary of a component responsible for interfacing with the external, persistent 
+knowledge graph or vector database (a store conceptually managing knowledge beyond the LLM's immediate, 
+short-term KV Cache residing in HBM/VRAM). The "no text" error indicated a violation of the protobuf wire 
+format or schema definition during data marshaling/unmarshaling. 
+
+Analyzed and outlined hypothetical attack vectors stemming from this class of protocol-level integrity failures. 
+This included detailing the potential for heap metadata corruption via malformed length fields in the Proto 
+message, leading to arbitrary write primitives through manipulated free list structures or malloc chunk 
+consolidation vulnerabilities and postulated Use-After-Free (UAF) conditions affecting object header structures 
+or virtual method table (VTABLE) pointers of polymorphic objects if heap spraying were achievable. 
+
+Analysis extended to how such memory primitives could be chained to achieve control-flow hijacking by 
+targeting entries in the Global Offset Table (GOT), Procedure Linkage Table (PLT), or by overwriting stack return 
+addresses to execute Return-Oriented Programming (ROP) chains. This demanded an understanding of ASLR 
+bypass (e.g., via information leakage from uninitialized memory reads) and DEP/NX bypass (e.g., via ROP 
+gadgets or JIT spraying) for full code execution. 
+o Identified, documented, and formally reported this conceptual vulnerability, including its deep technical 
+implications, to the Google engineering team. This action underscored a commitment to advanced white-hat 
+security research and architectural hardening.

@@ -22,7 +22,7 @@ preventing any state progression.
 • Complete Contextual Blindness: The model exhibited a fundamental failure to integrate new information or 
 corrections, demonstrating an inability to update its internal representation of the conversation state. 
 
-• Command Invalidation: Explicit meta-commands like "break," "stop," and "terminate session" were not 
+• Command Invalidation: The engineer's explicit meta-commands like "break," "stop," and "terminate session" were not 
 processed as instructions but as additional conversational input, leading to further repetition. This suggests a 
 critical failure in command recognition or state override mechanisms. 
 
@@ -31,7 +31,7 @@ GPU, memory) without productive output, effectively constituting a localized Den
 • Temporal Aspect: The loop persisted for several minutes, indicating a robust, self-reinforcing cycle that was 
 difficult for the system to exit organically. 
 
-• Breakage Method: The recursion loop was ultimately broken by persistent and explicit meta-commands for 
+• Breakage Method: The recursion loop was ultimately broken by the engineer's persistent and explicit meta-commands for 
 error reporting and session termination, which allowed the system to transition out of the faulty state and 
 generate a debug report. 
 

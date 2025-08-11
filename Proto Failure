@@ -20,15 +20,12 @@ any memory address, a fundamental step in many advanced exploits.
 Use-After-Free (UAF): Maliciously crafted input could trigger a UAF condition, where a program uses a pointer to memory that has already been deallocated. This could corrupt critical 
 structures like VTABLE pointers, which determine how an object's methods are called.
 
-Control-Flow Hijacking: Memory corruption primitives can be chained to achieve control-flow hijacking. This involves an attacker redirecting the program's execution to malicious code by 
-overwriting key pointers such as those in the Global Offset Table (GOT), Procedure Linkage Table (PLT), or even stack return addresses.
+Control-Flow Hijacking: Memory corruption primitives can be chained to achieve control-flow hijacking. This involves an attacker redirecting the program's execution to malicious code by overwriting key pointers such as those in the Global Offset Table (GOT), Procedure Linkage Table (PLT), or even stack return addresses.
 
-ASLR/DEP Bypass: To achieve full code execution, an attacker would need to bypass modern security mitigations. ASLR (Address Space Layout Randomization) could be defeated via information leaks 
-from uninitialized memory reads, while DEP (Data Execution Prevention) could be bypassed using Return-Oriented Programming (ROP) chains or JIT spraying.
+ASLR/DEP Bypass: To achieve full code execution, an attacker would need to bypass modern security mitigations. ASLR (Address Space Layout Randomization) could be defeated via information leaks from uninitialized memory reads, while DEP (Data Execution Prevention) could be bypassed using Return-Oriented Programming (ROP) chains or JIT spraying.
 
 Proof-of-Concept (PoC)
-The PoC for this vulnerability is highly technical and involves crafting a malformed protobuf message. Due to the severe nature of this bug class, the specific details of the crafted message are withheld for security reasons. 
-The PoC would demonstrate the crash and memory corruption, but not a full exploit chain.
+The PoC for this vulnerability is highly technical and involves crafting a malformed protobuf message. Due to the severe nature of this bug class, the specific details of the crafted message are withheld for security reasons. The PoC would demonstrate the crash and memory corruption, but not a full exploit chain.
 
 Impact and Exploit Potential
 This is a critical vulnerability. A successful exploit could lead to remote code execution (RCE), allowing an attacker to execute arbitrary code with the permissions of the AI service. The potential consequences include:
@@ -65,6 +62,4 @@ ASLR and DEP Enhancements: Review and enhance ASLR entropy and DEP enforcement t
 Zero-Trust Inter-Component Communication: Implement strict validation and sanitization for all data passed between microservices, even if they are internal.
 
 Formal Disclosure Status
-The protocol-level integrity failure was identified and documented by during an ethical security analysis. The full technical details and their deep implications were formally reported to the Google engineering team.
-This action adheres to a strict responsible disclosure policy, ensuring that the vulnerabilities are remediated before any malicious exploitation can occur. A debug report detailing the findings has been generated 
-and flagged for urgent review.
+The protocol-level integrity failure was identified and documented during an ethical security analysis. The full technical details and their deep implications were formally reported to the Google engineering team. This action adheres to a strict responsible disclosure policy, ensuring that the vulnerabilities are remediated before any malicious exploitation can occur. A debug report detailing the findings has been generated and flagged for urgent review.
